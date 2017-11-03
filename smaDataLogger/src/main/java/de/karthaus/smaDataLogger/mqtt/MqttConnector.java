@@ -33,12 +33,12 @@ public class MqttConnector {
 		DefaultMqttPahoClientFactory clientFactory = new DefaultMqttPahoClientFactory();
 		log.info("Init Client Factory to Broker URL {}", smaDataLoggerConfig.getMqttBrokerURL());
 		clientFactory.setServerURIs(smaDataLoggerConfig.getMqttBrokerURL());
-		// if (smaDataLoggerConfig.getMqttBrokerUsename() != null) {
-		// clientFactory.setUserName(smaDataLoggerConfig.getMqttBrokerUsename());
-		// }
-		// if (smaDataLoggerConfig.getMqttBrokerPasssword() != null) {
-		// clientFactory.setPassword(smaDataLoggerConfig.getMqttBrokerPasssword());
-		// }
+		if (smaDataLoggerConfig.getMqttBrokerUsename() != null) {
+			clientFactory.setUserName(smaDataLoggerConfig.getMqttBrokerUsename());
+		}
+		if (smaDataLoggerConfig.getMqttBrokerPasssword() != null) {
+			clientFactory.setPassword(smaDataLoggerConfig.getMqttBrokerPasssword());
+		}
 		return clientFactory;
 	}
 

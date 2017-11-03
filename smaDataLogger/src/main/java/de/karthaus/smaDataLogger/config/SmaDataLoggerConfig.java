@@ -17,10 +17,10 @@ public class SmaDataLoggerConfig {
 	@Value("${mqtt.broker.url}")
 	private String mqttBrokerURL;
 
-	@Value("${mqtt.broker.password}")
+	@Value("${mqtt.broker.password:#{null}}")
 	private String mqttBrokerPasssword;
 
-	@Value("${mqtt.broker.username}")
+	@Value("${mqtt.broker.username:#{null}}")
 	private String mqttBrokerUsename;
 
 	@Value("${mqtt.broker.topic}")
