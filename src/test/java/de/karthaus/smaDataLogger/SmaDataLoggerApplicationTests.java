@@ -9,6 +9,7 @@ public class SmaDataLoggerApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		
 	}
 
 }

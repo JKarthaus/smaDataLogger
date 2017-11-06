@@ -44,7 +44,8 @@ public class SunCycleService {
 	private void calculateCycle() {
 		sunrise = calculator.getOfficialSunriseCalendarForDate(Calendar.getInstance());
 		sunset = calculator.getOfficialSunsetCalendarForDate(Calendar.getInstance());
-		log.info("Calculated sunrise to : {} sunset to {}", DateFormat.getTimeInstance().format(sunrise), DateFormat.getTimeInstance().format(sunset));
+		log.info("Calculated sunrise to : {} sunset to {}", DateFormat.getTimeInstance().format(sunrise.getTime()),
+				DateFormat.getTimeInstance().format(sunset.getTime()));
 	}
 
 	/**

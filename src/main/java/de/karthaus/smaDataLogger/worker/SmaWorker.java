@@ -30,7 +30,6 @@ public class SmaWorker {
 	@Scheduled(fixedDelay = (8 * 1000))
 	private void getData() {
 		double pac = 0;
-
 		if (sunCycleService.isSunUp()) {
 			if (smaLoggerService.isConnected()) {
 				pac = smaLoggerService.getPac();
@@ -47,12 +46,15 @@ public class SmaWorker {
 
 	@Scheduled(fixedDelay = (10 * 60 * 1000))
 	private void checkConnected() {
-		if (!smaLoggerService.isConnected()) {
+		if (sunCycleService.isSunUp() && !smaLoggerService.isConnected()) {
 			log.info("Try to Connect to device...");
 			smaLoggerService.connect();
 			if (!smaLoggerService.isConnected()) {
 				log.info("SMA is not connected.");
 			}
+		}
+		if (!sunCycleService.isSunUp()) {
+			log.debug("Don't try to reconnect during Sunset");
 		}
 	}
 
