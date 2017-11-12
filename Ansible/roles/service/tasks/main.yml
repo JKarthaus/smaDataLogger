@@ -1,0 +1,8 @@
+---
+# Config smaDataLogger as System service
+
+- name: Create Link from smaDataLogger to init.d
+  file:
+    src: /opt/smaDataLogger/smaDataLogger-1.0.0.jar
+    dest: /etc/init.d/smaDataLogger
+    state: link

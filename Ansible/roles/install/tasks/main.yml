@@ -1,0 +1,66 @@
+---
+# Install sma logger Files on target system
+
+- name: copy the Jar File
+  copy:
+    src: ../../../../build/libs/smaDataLogger-1.0.0.jar
+    dest: /opt/smaDataLogger/
+    owner: root
+    group: root
+    mode: 0554
+    
+- name: copy the Native Lib Folder
+  copy:
+    src: ../../../../native
+    dest: /opt/smaDataLogger/
+    owner: root
+    group: root
+    mode: 0644
+ 
+- name: copy the config file 
+  copy:
+    src: ../../../../application.properties
+    dest: /opt/smaDataLogger/
+    owner: root
+    group: root
+    mode: 0644
+
+- name: copy the Native Lib Config File 
+  copy:
+    src: ../../../../yasdi.ini
+    dest: /opt/smaDataLogger/
+    owner: root
+    group: root
+    mode: 0644
+
+- name: link the Native Lib1 to System Lib path
+  file:
+    src: /opt/smaDataLogger/native/libyasdi_drv_ip.so
+    dest: /usr/lib/libyasdi_drv_ip.so
+    state: link
+
+- name: link the Native Lib2 to System Lib path
+  file:
+    src: /opt/smaDataLogger/native/libyasdi_drv_serial.so
+    dest: /usr/lib/libyasdi_drv_serial.so
+    state: link
+ 
+- name: link the Native Lib3 to System Lib path
+  file:
+    src: /opt/smaDataLogger/native/libyasdi.so
+    dest: /usr/lib/libyasdi.so
+    state: link
+ 
+- name: link the Native Lib4 to System Lib path
+  file:
+    src: /opt/smaDataLogger/native/libyasdi4j.so
+    dest: /usr/lib/libyasdi4j.so
+    state: link
+ 
+- name: link the Native Lib5 to System Lib path
+  file:
+    src: /opt/smaDataLogger/native/libyasdimaster.so
+    dest: /usr/lib/libyasdimaster.so
+    state: link
+ 
+    
