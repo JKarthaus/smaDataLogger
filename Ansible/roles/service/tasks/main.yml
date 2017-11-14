@@ -6,3 +6,10 @@
     src: /opt/smaDataLogger/smaDataLogger-1.0.0.jar
     dest: /etc/init.d/smaDataLogger
     state: link
+
+- name: Configure smaDataLogger as System Service
+  service:
+    name: smaDataLogger
+    state: restarted
+    enabled: true
+      

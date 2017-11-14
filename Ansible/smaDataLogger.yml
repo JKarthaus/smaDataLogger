@@ -9,4 +9,4 @@
   roles:
     - install
     - service
-    
+    - logrotate
