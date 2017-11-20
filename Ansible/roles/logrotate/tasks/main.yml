@@ -1,0 +1,10 @@
+---
+# Config Logrotate for DataLogger
+
+- name: Copy logrotate config
+  copy:
+    src: ../template/smaDataLogger
+    dest: /etc/logrotate.d/
+    owner: root
+    group: root
+    mode: 0644

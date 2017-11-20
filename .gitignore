@@ -1,0 +1,9 @@
+.classpath
+.gradle
+/.gradle/
+/bin/
+/build/
+/doit.sh
+
+.project
+
