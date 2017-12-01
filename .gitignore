@@ -4,6 +4,7 @@
 /bin/
 /build/
 /doit.sh
-
+/.settings/
+/.gradle/
 .project
 
