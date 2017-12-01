@@ -35,5 +35,8 @@ then put the IP adress of your Target RPI in the File **smaDataLogger/Ansible/ho
 
 and start the installation with **install.sh**
 
+## More Info ?
+![More Information in my Blog ...](http://joern-karthaus.de/iot_challenge/index.html)
+
 
 
