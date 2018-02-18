@@ -63,4 +63,9 @@
     dest: /usr/lib/libyasdimaster.so
     state: link
  
+- name: comment out the line in init.tab for serial connection for terminal
+  replace:
+    dest: /etc/inittab
+    regexp: '^T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100'
+    replace: '#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100'
     
