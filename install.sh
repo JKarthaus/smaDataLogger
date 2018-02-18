@@ -4,4 +4,4 @@
 
 cd Ansible
 
-ansible-playbook smaDataLogger.yml
+ansible-playbook --ask-sudo-pass smaDataLogger.yml
