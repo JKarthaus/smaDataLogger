@@ -21,6 +21,6 @@ public class InfluxServiceTest extends TestCase {
 
     @Test
     public void testWriteDatapoint() {
-        influxService.WriteDatapoint("pac", 0);
+        influxService.WriteDatapoint("pac", 0.0);
     }
 }

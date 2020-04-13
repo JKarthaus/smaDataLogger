@@ -4,7 +4,6 @@
 - name: apply common configuration to all nodes
   hosts: all
   become: yes
-  remote_user: pi
 
   roles:
     - install

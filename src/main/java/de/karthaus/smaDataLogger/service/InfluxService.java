@@ -44,11 +44,11 @@ public class InfluxService {
     }
 
     /**
-     *
      * @param tag
      * @param value
      */
-    public void WriteDatapoint(String tag, int value) {
+    public void WriteDatapoint(String tag, Double value) {
+        log.debug("Store value:{} to Tag:{} in InfluxDB at Server:{}", value, tag, server);
         influxDB.write(Point.measurement("smaMeasurement")
                 .time(System.currentTimeMillis(), TimeUnit.MILLISECONDS)
                 .tag("dataType", tag)
