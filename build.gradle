@@ -16,6 +16,7 @@ apply plugin: 'org.springframework.boot'
 
 group = 'de.karthaus'
 version = '1.0.0'
+
 sourceCompatibility = 1.8
 
 repositories {
@@ -29,6 +30,7 @@ dependencies {
 	compile group: 'org.springframework.integration', name: 'spring-integration-core', version: '4.3.12.RELEASE'
 	compile group: 'org.springframework.integration', name: 'spring-integration-mqtt', version: '4.3.12.RELEASE'
 	compile 'com.luckycatlabs:SunriseSunsetCalculator:1.2'
+	compile group: 'org.influxdb', name: 'influxdb-java', version: "2.17"
 	
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }

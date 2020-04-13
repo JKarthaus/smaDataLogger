@@ -20,5 +20,4 @@ read -p "Press any key to continue... " bla
 
 cd Ansible
 
-# ansible-playbook --ask-sudo-pass smaDataLogger.yml
-ansible-playbook smaDataLogger.yml
+ansible-playbook -b --ask-become-pass smaDataLogger.yml
