@@ -19,7 +19,7 @@
  
 - name: copy the config file 
   copy:
-    src: ../../../../application.properties
+    src: template/application.properties
     dest: /opt/smaDataLogger/
     owner: root
     group: root
