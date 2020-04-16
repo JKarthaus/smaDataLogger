@@ -1,7 +1,7 @@
 # smaDataLogger
 
 This Project connect an **SMA Sunny Boy 5000TL-21** Photovoltaik 
-Converter to an MQTT Broker / InfluxDB
+Inverter to an MQTT Broker / InfluxDB Database.
 
 The SMA Inverter can be connected via Bluetooth or RS485.
 
@@ -17,10 +17,10 @@ this Project use the native C-Library [YASDI](https://www.sma.de/produkte/monito
 Thank you for sharing the Library to the community.
 
 Second Projekt ist [YASDI4J](https://github.com/SolarNetwork/yasdi4j) this Projekt delivers the JAVA binding 
-for ![YASDI](https://www.sma.de/produkte/monitoring-control/yasdi.html)
+for [YASDI](https://www.sma.de/produkte/monitoring-control/yasdi.html)
 
-## If you are interessted in more Information please read my Blog Post for this Project.
-
-[Detailed Project description](https://joern-karthaus.de/blog/2020-04-14_smaDataLogger.html)
+## More Information
+If you are interested in the project take a look at my detailed blog post about it.  
+[Goto the Blog (German)](https://joern-karthaus.de/blog/2020-04-14_smaDataLogger.html)
 
 
